@@ -33,6 +33,7 @@ h2,
 h3 {
   color: var(--color-heading);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -179,6 +180,8 @@ a {
 
 .icon-white {
   fill: #fff;
+  color: #fff;
+  /* property at 183 is not sured */
 }
 
 .icon-container {
@@ -208,8 +211,14 @@ a {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+  outline: 0;
 }
-
+.btn .icon{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;;
+  vertical-align: middle;
+}
 .btn--primary {
   background: var(--color-primary);
   color: #fff;
@@ -230,6 +239,8 @@ a {
 
 .btn--accent {
   background: var(--color-accent);
+  color: #fff;
+ 
 }
 
 .btn--accent:hover {
@@ -287,22 +298,24 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
+  padding: 1.5rem 2rem;
+  
 }
 
 .input .btn {
-  background: var(--color-accent);
+ margin: 4px;
 }
 
-.input-group .bnt {
+/* .input-group .btn {
   margin: 0;
-}
+} */
 
 @media screen and (min-width:1024px) {
   .input {
     font-size: 1.5rem;
   }
 }
-
+/* Cards */
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -325,12 +338,27 @@ a {
   background: var(--color-secondary);
   color: #fff;
 }
-
+.card--primary .badge-primary{
+  background-color: #126de4;
+  margin-top:23rem;
+}
 .card--secondary .badge-secondary {
   background: #02cdf1;
 }
 
 /* Plan */
+ .plan{
+  transition: transform 1s;
+}
+.plan--popular{
+  transform: scale(1.05);
+}
+.plan--popular:hover{
+  transform: scale(0);
+}
+.plan:hover{
+transform: scale(1.05);
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -355,7 +383,7 @@ a {
   font-weight: 300;
   letter-spacing: 1px;
   display: block;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 
 }
 
@@ -366,6 +394,7 @@ a {
 .plan--popular .card__header {
   position: relative;
 }
+
 
 .plan--popular .card__header::before {
   content: url(../css/images/popular.svg);
@@ -477,7 +506,7 @@ a {
   }
 }
 
-@media screen and (min-width:1024) {
+@media screen and (min-width:1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -610,7 +639,7 @@ a {
   text-align: center;
 }
 .container{
-  width: 1150px;
+  width: 1140px;
   margin: 0 auto;
 }
 /* Navigation Bars */
@@ -666,3 +695,61 @@ a {
   border: 0;
 }
 }
+/* Hero Section */
+.block--dark .block__heading{
+  color: #fff;
+}
+.hero__tagline{
+  color:#b9c3cf;
+  font-size: 2rem;
+  letter-spacing:1px;
+  margin: 2rem 0 5rem;
+}
+.hero--image{
+  width:100%;
+}
+.hero{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+ @media screen and (min-width:768px) {
+  .hero{
+    padding-top: 0;
+  }
+  .hero__content{
+    text-align: left;
+    align-self: center;
+  }
+} 
+/* Block Domain */
+.block-domain{
+  box-shadow: 0 0 20px 10px #e6ebee;
+  border: none;
+  margin: 4rem auto;
+  max-width: 670px;
+ 
+}
+.block-domain__prices{
+  display: grid;
+  grid-template: repeat(2,6rem)/repeat(3,1fr);
+ font-size: 2rem;
+ font-weight: 700;
+ justify-items: center;
+ max-width: 700px;
+ margin: 0 auto;
+}
+@media screen and (min-width:768px) {
+  .block-domain__prices{
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr))
+  } 
+}
+
+/* Block Plans */
+.block-plans .grid{
+  gap:8rem 4rem;
+  
+}
+.block-plans .card{
+  max-width: 500px;
+}
+
