@@ -753,3 +753,28 @@ transform: scale(1.05);
   max-width: 500px;
 }
 
+/* Block Feature */
+.feature__heading{
+  margin:1rem 0  ;
+}
+.feature{
+  gap: 4rem 2rem ;
+  margin:12rem 0
+}
+.feature__image{
+  width: 100%;
+}
+/* Showcase Block */
+.block--showcase__image{
+  width: 100%;
+}
+@media screen and (min-width:768px) {
+  .block--showcase__image{
+    width: auto;
+    justify-self: end;
+    max-width: 700px;
+  }
+  .block--showcase .grid{
+    grid-template-columns: 50% 50%;
+  }
+}
