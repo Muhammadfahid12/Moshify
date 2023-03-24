@@ -527,8 +527,8 @@ transform: scale(1.05);
 /* Testimonials */
 .testimonial {
   padding: 3rem;
-  margin-bottom:15rem;
-  border: 3px solid red;
+  /* margin-bottom:15rem; */
+  /* border: 3px solid red; */
   
 }
 
